@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mila’s Fit Check</title>
+<meta name="description" content="A dress-up styling game. Read Mila’s messages, dress her for twelve plans and earn up to five stars for each.">
+<meta name="theme-color" content="#E8E9FB" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15112A" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Fit Check">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="mast">
+    <div class="mast-title"><span class="mast-kicker" id="kicker">Mila’s</span><h1>Fit <span>Check</span></h1></div>
+    <p class="mast-sub" id="sub"></p>
+    <div class="mast-score" id="score" aria-live="polite"></div>
+  </header>
+
+  <section aria-labelledby="h-plans">
+    <div class="sec-head"><h2 class="sec-h" id="h-plans">Her plans</h2><p class="sec-note">Twelve plans, five stars each. Start with any of them.</p></div>
+    <div class="diary-row" id="diary"></div>
+  </section>
+
+  <main class="studio">
+    <section class="stage" aria-label="The mirror">
+      <div class="mirror-wrap">
+        <div class="mirror" id="mirror"><svg id="doll" viewBox="20 0 260 500" preserveAspectRatio="xMidYMax meet" role="img"></svg></div>
+        <span class="name-tag" id="nameTag"></span>
+      </div>
+      <div class="stage-side">
+        <div class="gauges" id="gauges"></div>
+        <div class="stage-actions">
+          <button class="btn primary" id="btnShow" type="button">Show Mila</button>
+          <button class="btn quiet" id="btnRandom" type="button">Surprise me</button>
+          <button class="btn quiet" id="btnReset" type="button">Start again</button>
+        </div>
+      </div>
+    </section>
+    <section class="brief card" id="brief"></section>
+    <section class="wardrobe card" aria-labelledby="h-rail">
+      <h2 class="sr" id="h-rail">Wardrobe</h2>
+      <div class="tabs" id="tabs" role="tablist" aria-label="Wardrobe sections"></div>
+      <div id="panel"></div>
+    </section>
+  </main>
+
+  <section aria-labelledby="h-book">
+    <div class="sec-head"><h2 class="sec-h" id="h-book">Lookbook</h2><p class="sec-note" id="bookNote"></p></div>
+    <div id="book"></div>
+  </section>
+</div>
+<div class="report" id="report" hidden></div>
+<div class="toast" id="toast" role="status" hidden></div>
+<noscript><p style="padding:24px;font:600 16px system-ui">This game needs JavaScript. Please turn it on in your browser settings and reload.</p></noscript>
+<script src="art.js"></script>
+<script src="data.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
